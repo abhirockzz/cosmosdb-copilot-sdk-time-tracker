@@ -1,0 +1,28 @@
+{
+  "name": "time-tracker",
+  "version": "1.0.0",
+  "description": "A compact Toggl Track clone built with Electron + Copilot SDK + Azure Cosmos DB",
+  "main": "dist/main/main.js",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "npm run build && electron .",
+    "dev": "npm run build && electron ."
+  },
+  "dependencies": {
+    "@azure/cosmos": "^4.9.1",
+    "@azure/identity": "^4.13.0",
+    "@github/copilot-sdk": "^0.1.0",
+    "chart.js": "^4.4.0",
+    "dotenv": "^16.4.0",
+    "marked": "^17.0.3",
+    "uuid": "^11.0.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/uuid": "^10.0.0",
+    "electron": "^33.4.11",
+    "esbuild": "^0.27.3",
+    "typescript": "^5.6.0"
+  }
+}
