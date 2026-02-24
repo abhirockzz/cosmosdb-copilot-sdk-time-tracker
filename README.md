@@ -4,6 +4,8 @@ The [GitHub Copilot SDK](https://github.com/github/copilot-sdk) lets you embed C
 
 **TimeTrack** is an Electron based time tracking desktop app built with the GitHub Copilot SDK (TypeScript) and [Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/introduction).
 
+![](images/report_and_query.png)
+
 You can:
 
 - Track time with a start/stop timer, projects, and tags
@@ -22,7 +24,7 @@ You can:
 📺 **Here is a demo of the app in action**:
 
 <!-- TODO: Replace with actual YouTube video link -->
-[![YouTube Demo](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://youtu.be/VIDEO_ID)
+[![coming soon](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://youtu.be/VIDEO_ID)
 
 ## Prerequisites
 
@@ -140,6 +142,8 @@ npm start
 
 **Login** — Select a user (alice, bob, or carol) or enter the name of a custom user
 
+![](images/login.png)
+
 > This is simply to simulate multiple users in the app. There is no authentication or security — all data is stored in the same Cosmos DB container and scoped by `userId`.
 
 **Load sample data** — Click "Load sample data" on first login to seed activity data for the user.
@@ -160,8 +164,6 @@ npm start
 - *Summarize my last two weeks in 3 bullet points*
 
 **View reports** — Charts and summaries for Today, Yesterday, This Week, Last Week
-
-![](images/report_and_query.png)
 
 ---
 
@@ -245,10 +247,14 @@ Two options are supported:
 
 ### Option A: Azure AI Foundry
 
+To create and deploy a model in Azure AI Foundry, follow [Create and deploy an Azure OpenAI in Azure AI Foundry Models resource](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource).
+
+Use your deployment name as `BYOK_AZURE_MODEL`.
+
 ```bash
 BYOK_AZURE_ENDPOINT=https://your-resource.openai.azure.com
 BYOK_AZURE_API_KEY=your-api-key
-BYOK_AZURE_MODEL=gpt-4o            # your deployment name
+BYOK_AZURE_MODEL=gpt-4.1            # your deployment name
 BYOK_AZURE_API_VERSION=2024-10-21   # optional
 ```
 
