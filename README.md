@@ -11,7 +11,9 @@ You can:
 - Ask natural language questions about your time data — Copilot generates and runs Cosmos DB SQL queries automatically
 - Seed realistic sample data to explore the app immediately
 
-[![Quick demo](images/report_and_query.png)](https://abhirockzz.github.io/videos/timetrack_app_demo.mp4)
+<a href="https://abhirockzz.github.io/videos/timetrack_app_demo.mp4" target="_blank">
+  <img src="images/report_and_query.png" alt="Quick demo" width="100%">
+</a>
 
 ## Highlights
 
