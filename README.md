@@ -23,8 +23,7 @@ You can:
 
 📺 **Here is a demo of the app in action**:
 
-<!-- TODO: Replace with actual YouTube video link -->
-[![coming soon](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://youtu.be/VIDEO_ID)
+<video src="https://abhirockzz.github.io/videos/timetrack_app_demo.mp4" controls width="100%"></video>
 
 ## Prerequisites
 
