@@ -1,8 +1,8 @@
-# TimeTrack app - A time tracking Electron app built with the GitHub Copilot SDK and Azure Cosmos DB
+#  TimeTrack — Built with the GitHub Copilot SDK and Azure Cosmos DB
 
 The [GitHub Copilot SDK](https://github.com/github/copilot-sdk) lets you embed Copilot's agentic workflows directly into your apps and it's available for Python, TypeScript, Go, and .NET.
 
-**TimeTrack** is an Electron based time tracking desktop app built with the GitHub Copilot SDK (TypeScript) and [Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/introduction).
+**TimeTrack** is simple desktop app built with the GitHub Copilot SDK (TypeScript) and [Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/introduction).
 
 You can:
 
