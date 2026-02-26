@@ -4,14 +4,14 @@ The [GitHub Copilot SDK](https://github.com/github/copilot-sdk) lets you embed C
 
 **TimeTrack** is an Electron based time tracking desktop app built with the GitHub Copilot SDK (TypeScript) and [Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/introduction).
 
-![](images/report_and_query.png)
-
 You can:
 
 - Track time with a start/stop timer, projects, and tags
 - View entries, reports, and charts across multiple users
 - Ask natural language questions about your time data — Copilot generates and runs Cosmos DB SQL queries automatically
 - Seed realistic sample data to explore the app immediately
+
+[![Quick demo](images/report_and_query.png)](https://abhirockzz.github.io/videos/timetrack_app_demo.mp4)
 
 ## Highlights
 
@@ -20,10 +20,6 @@ You can:
 - **🔑 BYOK (Bring Your Own Key)** — The Copilot SDK's [BYOK](https://github.com/github/copilot-sdk/blob/main/docs/guides/setup/byok.md) support lets you swap the default Copilot model for your own deployment. This app supports Azure AI Foundry and local OpenAI-compatible servers (Ollama, Foundry Local) — just configure a few env vars and the app behavior stays identical.
 
 - **💻 Local mode** — You can run the app without an Azure account by using the [Cosmos DB vNext emulator](https://learn.microsoft.com/en-us/azure/cosmos-db/emulator-linux). It runs as a single Docker container with HTTP (no TLS setup) and includes a built-in Data Explorer UI at `http://localhost:1234` for browsing your data.
-
-📺 **Here is a demo of the app in action**:
-
-<video src="https://abhirockzz.github.io/videos/timetrack_app_demo.mp4" controls width="100%"></video>
 
 ## Prerequisites
 
