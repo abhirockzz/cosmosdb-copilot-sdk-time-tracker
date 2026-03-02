@@ -166,36 +166,32 @@ npm start
 
 ## How It Works
 
-```mermaid
-flowchart LR
-    subgraph Frontend
-        A[Electron Renderer]
-    end
+The user's question flows from the Electron UI through the Copilot SDK to the model, which generates a Cosmos DB SQL query, executes it via a tool call, and either returns a conversational answer or self-corrects and retries if the SQL errors out.
 
-    subgraph "Main Process"
-        B[IPC Handlers]
-        C[Copilot SDK]
-        D[Tool Handler]
-        E[Cosmos DB Client]
-    end
-
-    subgraph External
-        F[Copilot CLI]
-        G[Azure Cosmos DB]
-    end
-
-    A -->|"1. Ask question / Save entry"| B
-    B -->|"CRUD"| E
-    E <-->|"Direct queries"| G
-    B -->|"AI query"| C
-    C <-->|"2. Create session"| F
-    F -->|"3. Tool call"| D
-    D --> E
-    E <-->|"4. Query"| G
-    D -->|"5. Tool result"| F
-    F -->|"6. Response"| C
-    C --> B
-    B -->|"7. Answer to user"| A
+```
++--------------+     +----------------+     +-------------+
+|  Electron UI | --> |  Copilot SDK   | --> | Copilot CLI |
+|  (renderer)  |     |  (main process)|     |  (sidecar)  |
++--------------+     +----------------+     +------+------+
+       ^                                           |
+       |                                    tool call: query_time_data
+       |                                           |
+       |                                    +------v------+
+       |                                    |  Cosmos DB  |
+       |                                    +------+------+
+       |                                           |
+       |                                     result or error
+       |                                           |
+       |                                    +------v------+
+       |                                    |    Model    |
+       |                                    | (interpret) |
+       |                                    +------+------+
+       |                                      |         |
+       |                                success?     SQL error?
+       |                                   |          retry with
+       |                                   |        corrected SQL
+       |                                   |             |
+       +---  AI response  <---------------+     (back to Cosmos DB)
 ```
 
 ### AI-Generated SQL Queries
